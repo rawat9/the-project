@@ -5,7 +5,14 @@
 - node version `>= v20.6.0`
 - pnpm version `>= v9.1.0`
 
-First, run the development server:
+
+First, install dependencies:
+
+```bash
+pnpm install
+```
+
+Run the development server
 
 ```bash
 pnpm dev
