@@ -1,3 +1,5 @@
+import { Button } from '~/components/ui/button'
+
 export default function Page() {
-  return <h3>Marketing page</h3>
+  return <Button variant="default">Get started</Button>
 }
