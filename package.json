@@ -10,7 +10,8 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+		"preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
