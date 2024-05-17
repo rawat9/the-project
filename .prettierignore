@@ -1,0 +1,10 @@
+.next
+next.config.mjs
+global.css
+tsconfig.json
+README.md
+build
+node_modules
+package.json
+.cache
+public
