@@ -1,8 +1,13 @@
+import { nextui } from '@nextui-org/theme'
 import type { Config } from 'tailwindcss'
 
 const config = {
   darkMode: ['class'],
-  content: ['./src/components/**/*.{ts,tsx}', './src/app/**/*.{ts,tsx}'],
+  content: [
+    './src/components/**/*.{ts,tsx}',
+    './src/app/**/*.{ts,tsx}',
+    './node_modules/@nextui-org/theme/dist/components/button.js',
+  ],
   theme: {
     container: {
       center: true,
@@ -28,7 +33,7 @@ const config = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [nextui()],
 } satisfies Config
 
 export default config
