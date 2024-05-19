@@ -1,5 +1,11 @@
-import { nextui } from '@nextui-org/theme'
+import { nextui } from '@nextui-org/react'
 import type { Config } from 'tailwindcss'
+
+const {
+  default: flattenColorPalette,
+} = require('tailwindcss/lib/util/flattenColorPalette')
+
+const flowbite = require('flowbite-react/tailwind')
 
 const config = {
   darkMode: ['class'],
@@ -7,6 +13,7 @@ const config = {
     './src/components/**/*.{ts,tsx}',
     './src/app/**/*.{ts,tsx}',
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
+    flowbite.content(),
   ],
   theme: {
     container: {
@@ -33,7 +40,18 @@ const config = {
       },
     },
   },
-  plugins: [nextui()],
+  plugins: [nextui(), addVariablesForColors, flowbite.plugin()],
 } satisfies Config
 
 export default config
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme('colors'))
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
+  )
+
+  addBase({
+    ':root': newVars,
+  })
+}
