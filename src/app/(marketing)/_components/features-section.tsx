@@ -1,29 +1,29 @@
-// import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
+import { UploadCloud, Share2, LineChart, LayoutPanelTop } from 'lucide-react'
 
 const features = [
   {
-    name: 'Push to deploy',
+    name: 'CV to Portfolio',
     description:
-      'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
-    // icon: CloudArrowUpIcon,
+      'Transform your CV into a captivating portfolio that beautifully showcases your skills and experiences.',
+    icon: UploadCloud,
   },
   {
-    name: 'SSL certificates',
+    name: 'Seamless Sharing',
     description:
-      'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
-    // icon: LockClosedIcon,
+      'Easily share your portfolio with recruiters and your professional community, making it effortless to present your work and achievements.',
+    icon: Share2,
   },
   {
-    name: 'Simple queues',
+    name: 'Performance Insights',
     description:
-      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
-    // icon: ArrowPathIcon,
+      'Gain insights into your portfolios performance with web analytics, allowing you to track visitor engagement and optimize your online presence effectively.',
+    icon: LineChart,
   },
   {
-    name: 'Advanced security',
+    name: 'Customizable Templates',
     description:
-      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
-    // icon: FingerPrintIcon,
+      'Choose from a diverse range of customizable templates to personalize your portfolio and make it uniquely yours, reflecting your style and personality effortlessly.', 
+    icon: LayoutPanelTop,
   },
 ]
 
@@ -36,12 +36,10 @@ export default function Features() {
             Deploy faster
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Everything you need to deploy your app
+            Unlock Your Potential with Effortless Portfolio Creation
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-            Suspendisse eget egestas a elementum pulvinar et feugiat blandit at.
-            In mi viverra elit nunc.
+            At Expose, we believe everyone deserves a stunning portfolio to showcase their skills and talents. Our platform offers a seamless solution for individuals and professionals alike to create impressive portfolios in minutes, without any technical expertise required.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -50,10 +48,7 @@ export default function Features() {
               <div key={feature.name} className="relative pl-16">
                 <dt className="text-base font-semibold leading-7 text-gray-900">
                   <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                    {/* <feature.icon
-                      className="h-6 w-6 text-white"
-                      aria-hidden="true"
-                    /> */}
+                    <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
                   {feature.name}
                 </dt>
