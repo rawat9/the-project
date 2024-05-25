@@ -11,9 +11,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-		"preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
+    "@clerk/nextjs": "^5.0.12",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
